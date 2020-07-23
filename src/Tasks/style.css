@@ -1,0 +1,85 @@
+.taskList {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    min-height: 80px;
+}
+
+.taskList__element {
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .taskList__element {
+        grid-template-columns: 25% 1fr 25%;
+    }
+}
+
+.taskList__element--hide {
+    display: none;
+}
+
+.taskList__button {
+    width: 35px;
+    height: 35px;
+}
+
+
+.taskList__button--red {
+    background-color: crimson;
+    order: 1;
+    color: white;
+    font-size: 22px;
+    justify-self: end;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.taskList__button--red:hover {
+    background-color: hsl(348, 83%, 58%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .taskList__button--red {
+        margin-right: 10px;
+    }
+}
+
+.taskList__button--green {
+    background-color: green;
+    order: -1;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.taskList__button--green:hover {
+    background-color: hsl(120, 100%, 32%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .taskList__button--green {
+        margin-left: 10px;
+    }
+}
+
+.taskList__content--crossed {
+    text-decoration: line-through;
+}

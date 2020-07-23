@@ -1,0 +1,21 @@
+.container__header {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .container__header {
+        text-align: center;
+    }
+}
+
+.container__header--white {
+    background-color: #fff;
+    font-size: 24px;
+    padding: 25px 0 25px 15px;
+    margin: 0;
+}
