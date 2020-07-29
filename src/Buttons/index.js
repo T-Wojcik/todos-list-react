@@ -17,7 +17,7 @@ const Buttons = (props) => {
 
                 <li className="buttonList__item">
                     <button className="buttonList__button">
-                        {props.hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
+                        {props.hideDone ? "Pokaż ukończone" : "Ukryj ukończone"}
                     </button>
                 </li>
 
