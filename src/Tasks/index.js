@@ -1,14 +1,16 @@
 import React from 'react';
 import "./style.css";
 
-const Tasks = (props) => (
+const Tasks = ({tasks, hideDone, removeTask, toggleTaskDone}) => (
     <ul className="taskList">
-        {props.tasks.map(task => (
-            <li className={`taskList__element ${task.done && props.hideDone ? "taskList__element--hide" : ""}`}>
+        {tasks.map(task => (
+            <li className={`taskList__element ${task.done && hideDone ? "taskList__element--hide" : ""}`}>
 
                 {
                     <>
-                        <button className="taskList__button taskList__button--green">
+                        <button 
+                        onClick={() => toggleTaskDone(task.id)}
+                        className="taskList__button taskList__button--green">
                             {`${task.done ? "✔" : ""}`}
                         </button>
 
@@ -16,7 +18,9 @@ const Tasks = (props) => (
                             {task.content}
                         </span>
 
-                        <button className="taskList__button taskList__button--red">
+                        <button 
+                        onClick={() => removeTask(task.id)}
+                        className="taskList__button taskList__button--red">
                             🗑
                         </button>
                     </>

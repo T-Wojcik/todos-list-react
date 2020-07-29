@@ -42,3 +42,7 @@
     cursor: pointer;
     transition: 0.3s;
 }
+
+.buttonList__button:disabled{
+    color:#888;
+}
